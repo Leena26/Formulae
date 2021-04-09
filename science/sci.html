@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Formula</title>
+    <link rel="stylesheet" href="..//css/nav.css">
+    <link rel="stylesheet" href="..//css/fonts.css">
+    <link rel="stylesheet" href="./sci.css">
+</head>
+<body>
+    <nav>
+        <div class="top-nav">
+            <a href="..//index.html">
+                <h2 id="logo"><span>C</span>ode<span>R</span>age</h2>
+            </a>
+            <ul>
+                <a href="..//Math/math.html"><li>Math</li></a>
+                <a href=""><li>Science</li></a>
+                <a href="..//about/about.html"><li>About</li></a>
+                <a href="..//contact/contact.html"><li id="cont">Contact</li></a>
+            </ul>
+        </div>
+        <!-- End of top navbar -->
+
+        <!-- Toggle Menu -->
+        <div id="hamburger">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="../Math/math.html"><li>Math</li></a>
+                <a href="./sci.html"><li>Science</li></a>
+                <a href="../about/about.html"><li>About</li></a>
+                <a href="..//contact/contact.html"><li >Contact</li></a>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+
+    <div class="all">
+        <div class="startup">
+            <h1>Science Formulae</h1>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+        <div class="formulas">
+            <div class="form">
+                <div class="cards">
+                    <div class="card">
+                        <h4>Speed = Distance <span>&#x2044;</span> Time</h4>
+                    </div>
+
+                    <div class="card">
+                        <h4>Density = Mass <span>&#x2044;</span> Volume</h4>
+                    </div>
+
+                    <div class="card">
+                        <h4>Pressure = Force <span>&#x2044;</span> Area</h4>
+                    </div>
+
+                    <div class="card">
+                        <h4>Moment = Force&sdot;Distance from Pivot</h4>
+                    </div>
+
+                    <div class="card">
+                        <h4>Voltage = Current &sdot; Resistence</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="row1">
+            <div class="p link">
+                <h3>Links</h3>
+                <div class="l-link">
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./contact/contact.html"><p>Contact Us</p></a>
+                    <a target="_blank" href="https://coderage.paperform.co"><p>Feedback</p></a>
+                    <a href="./about/about.html"> <p>About Us</p></a>
+                </div>
+            </div>
+            <div class="p social">
+                <h3>Join Us on Social Media</h3>
+                <div class="media">
+                    <p><i class="fab fa-instagram"></i> Instagram</p>
+                    <p><i class="fab fa-facebook"></i> Facebook</p>
+                    <p><i class="fab fa-youtube"></i> Youtube</p>
+                    <p><i class="fab fa-twitter"></i> Twitter</p>
+                </div>
+            </div>
+            <div class="p news">
+                <h3>Join our Newsletter!</h3>
+                <form>
+                    <input type="email" id="email" placeholder="Email"/>
+                    <!-- <label for="email">email address</label> -->
+                    <button id="button">SUBSCRIBE <i class="fas fa-mouse"></i></button>
+                  </form>
+            </div>
+        </div>
+        <div class="row2">
+            <h5>&#169; 2021 Leena Dany - All Rights Reserved</h5>
+        </div>
+    </footer>
+
+
+    <script>
+        var email = document.getElementById('email'),
+        button = document.getElementById('button');
+
+        function validateEmail(email) {
+            var ex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            return ex.test(email);
+        }
+
+        email.addEventListener('keydown', function() {
+        var email = this.value;
+        
+        if(validateEmail(email)) {
+            button.classList.add('is-active');
+        }
+        });
+
+        button.addEventListener('click', function(e){
+        e.preventDefault();
+        this.classList.add('is-done','is-active');
+        
+        setTimeout(function(){ 
+            button.innerHTML = "Thanks! You have subscribed!"
+        }, 500);
+        });
+    </script>
+
+</body>
+</html>

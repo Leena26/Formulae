@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: 'Londrina Solid', cursive;
+    overflow-x: hidden;
+}
+
+body:root{
+    --ora: #FFAC1C;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    align-items: center;
+}
+
+/* FIRST PART */
+.startup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:95vw;
+    height: 75vh;
+    background: url("https://cdn.pixabay.com/photo/2015/11/05/08/21/geometry-1023846_1280.jpg");
+    background-size: cover;
+}
+
+.startup h1{
+    font-size: 60px;
+    font-weight: 300;
+    padding:5px 10px;
+    background: white;
+}
+
+.arrow{
+    position: absolute;
+    margin-top: 240px;
+    transform: translate(-50%,-50%);
+}
+
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 8px solid #FFAC1C;
+    border-right: 8px solid #FFAC1C;
+    transform: rotate(45deg);
+    margin: -20px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+/* END OF HEADER PART */
+
+
+/* FORMULAS */
+.formulas{
+    width: 95vw;
+    margin: 20px 0;
+    padding: 10px;
+    /* background: lightsteelblue; */
+}
+
+.formulas h3{
+    font-size: 30px;
+    color: rgb(41, 41, 41);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+}
+
+.form .card{
+    width: 320px;
+    height: 100px;
+    background: #23263f;
+    border-radius:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 10px;
+}
+
+.form .card h4{
+    font-weight: 100;
+    font-size: 27px;
+}
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width:900px){
+    .startup h1{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .startup h1{
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="top-nav">
+            <a href="../index.html">
+                <h2 id="logo"><span>C</span>ode<span>R</span>age</h2>
+            </a>
+            <ul>
+                <a href="..//Math/math.html"><li>Math</li></a>
+                <a href="..//science/sci.html"><li>Science</li></a>
+                <a href="..//about/about.html"><li>About</li></a>
+                <a href="..//contact/contact.html"><li id="cont">Contact</li></a>
+            </ul>
+        </div>
+        <!-- End of top navbar -->
+
+        <!-- Toggle Menu -->
+        <div id="hamburger">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="../Math/math.html"><li>Math</li></a>
+                <a href="..//science/sci.html"><li>Science</li></a>
+                <a href="../about/about.html"><li>About</li></a>
+                <a href="..//contact/contact.html"><li >Contact</li></a>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- PROFILE -->
+    <div class="all">
+        <div class="startup">
+            <h1>Wondering who made this?</h1>
+            <h2>Check it out! <i class="fas fa-angle-double-down"></i></h2>
+        </div>
+
+    
+        <div class="card">
+            <div class="left">
+                <div class="top-l">
+                    <img src="./IMG_7972.jpg" alt="">
+                    <h3>Leena Abigail Dany</h3>
+                    <h5>Prograd Jr</h5>
+                </div>
+                <div class="bottom-l">
+                    <a target="_blank" href="https://linktr.ee/leenaaanna"><button>Contact</button></a>
+                    <div class="icon">
+                        <a target="_blank" href="https://codepen.io/l-e-e"><i class="fab fa-codepen"></i></a>
+                        <a target="_blank" href="https://github.com/Leena26"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <a href="https://github.com/Leena26?tab=repositories" target="_blank">
+                    <div class="side-r">
+                        <h5>49</h5>
+                        <h4>Repositories</h4> 
+                    </div>
+                </a>
+                <a class="mid" target="_blank" href="https://codepen.io/l-e-e/pens/public">
+                    <div class="side-r">
+                        <h5>76</h5>
+                        <h4>Pens</h4>                     
+                    </div>
+                </a>
+                <a  target="_blank"  href="https://codepen.io/l-e-e/collections/">
+                    <div class="side-r">
+                        <h5>3</h5>
+                        <h4>Collections</h4>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="row1">
+            <div class="p link">
+                <h3>Links</h3>
+                <div class="l-link">
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./contact/contact.html"><p>Contact Us</p></a>
+                    <a target="_blank" href="https://coderage.paperform.co"><p>Feedback</p></a>
+                    <a href="./about/about.html"> <p>About Us</p></a>
+                </div>
+            </div>
+            <div class="p social">
+                <h3>Join Us on Social Media</h3>
+                <div class="media">
+                    <p><i class="fab fa-instagram"></i> Instagram</p>
+                    <p><i class="fab fa-facebook"></i> Facebook</p>
+                    <p><i class="fab fa-youtube"></i> Youtube</p>
+                    <p><i class="fab fa-twitter"></i> Twitter</p>
+                </div>
+            </div>
+            <div class="p news">
+                <h3>Join our Newsletter!</h3>
+                <form>
+                    <input type="email" id="email" placeholder="Email"/>
+                    <!-- <label for="email">email address</label> -->
+                    <button id="button">SUBSCRIBE <i class="fas fa-mouse"></i></button>
+                  </form>
+            </div>
+        </div>
+        <div class="row2">
+            <h5>&#169; 2021 Leena Dany - All Rights Reserved</h5>
+        </div>
+    </footer>
+
+
+    <script>
+        var email = document.getElementById('email'),
+        button = document.getElementById('button');
+
+        function validateEmail(email) {
+            var ex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            return ex.test(email);
+        }
+
+        email.addEventListener('keydown', function() {
+        var email = this.value;
+        
+        if(validateEmail(email)) {
+            button.classList.add('is-active');
+        }
+        });
+
+        button.addEventListener('click', function(e){
+        e.preventDefault();
+        this.classList.add('is-done','is-active');
+        
+        setTimeout(function(){ 
+            button.innerHTML = "Thanks! You have subscribed!"
+        }, 500);
+        });
+    </script>
+</body>
+</html>

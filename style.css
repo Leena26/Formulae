@@ -1,0 +1,238 @@
+@import url("./fonts.css");
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Londrina Solid', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    align-items: center;
+}
+
+/* FIRST PART */
+.startup{
+    display: flex;
+    justify-content: center;
+    width:90vw;
+}
+
+.startup img{
+    width: 500px;
+    margin: 20px;
+}
+
+.up-1{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+}
+
+.up-1 h1{
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.up-1 p{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.up-1 .p{
+    padding-top: 10px;
+}
+
+/* THE CARDS */
+.cards{
+    margin: 30px 0;
+    width: 95vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 300px;
+    height: 425px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    transition: all 0.5s ease;
+}
+
+.card:hover{
+    box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ;
+    
+}
+
+.card .img{
+    height:40%;
+}
+
+.math .img{
+    background: url("https://cdn.pixabay.com/photo/2014/09/12/10/10/cube-442544_1280.jpg");
+    background-size: cover;
+}
+
+.sci .img{
+    background: url("https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_1280.jpg");
+    background-size: cover;
+}
+
+.card .cont{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.card .cont h3{
+    width: 200px;
+    font-weight: 300;
+    font-size: 30px;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #FFAC1C;
+}
+
+.card .cont p{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.card .cont a{
+    list-style-type:none ;
+    text-decoration: none;
+}
+
+.card .cont button{
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 100;
+    font-size: 20px;
+    color: #FFAC1C;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background: #ffac1c26;
+    transition: 0.2s ease-in-out;
+}
+
+.card .cont button i{
+    margin-left: 10px;
+}
+
+.card .cont button:hover{
+    background: #ffac1c3f;
+    cursor: pointer;
+}
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width:950px){
+    .startup img{
+        width: 450px;
+    }
+
+    .up-1 p{
+        font-size: 18px;
+    }
+
+    .up-1 .p{
+        padding-top: 5px;
+    }
+
+    .up-1 h1{
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .startup img{
+        width: 400px;
+    }
+
+    .up-1 h1{
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .startup img{
+        width: 300px;
+    }
+
+    .up-1 p{
+        font-size: 15px;
+    }
+
+    .up-1 h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+
+    .card:hover{
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .startup img{
+        width: 200px;
+    }
+
+    .up-1 p{
+        font-size: 15px;
+    }
+
+    .up-1 h1{
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .startup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .up-1{
+        width: 90%;
+    }
+
+    .startup img{
+        width: 90%;
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+
